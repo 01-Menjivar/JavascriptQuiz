@@ -1,73 +1,45 @@
-# JavascriptQuiz
+# JavaScript Quiz
 
-Initial project for Javascript Quiz application.
+An interactive JavaScript quiz application built with React, TypeScript, and Material-UI. Test your JavaScript knowledge with challenging questions and detailed explanations.
 
-# React + TypeScript + Vite
+## Features
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- 50 unique JavaScript questions covering various difficulty levels
+- Modern UI built with Material-UI components
+- State persistence using Zustand with localStorage
+- Real-time scoring system
+- Question navigation with intuitive controls
+- Detailed explanations for each question
+- Random selection of 10 questions per session
+- Responsive design for desktop and mobile
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 18** - UI library
+- **TypeScript** - Static typing for JavaScript
+- **Vite** - Fast build tool and development server
+- **Material-UI (MUI)** - React component library
+- **Zustand** - Lightweight state management
+- **Axios** - HTTP client for data fetching
+- **Canvas Confetti** - Visual feedback effects
 
-## Expanding the ESLint configuration
+## How to Play
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. Click "Start" to begin the quiz
+2. Read the question and examine the JavaScript code
+3. Select one of the four answer options
+4. Navigate between questions using arrow controls
+5. View explanations after answering (click "Explain")
+6. Complete all 10 questions to see your final score
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Question Categories
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+The quiz covers essential JavaScript concepts:
+- Type coercion and data types
+- Arrow functions vs function declarations
+- Closures and scope
+- Array methods and operations
+- Object destructuring
+- Operators and expressions
+- Prototypes and inheritance
+- Asynchronous programming patterns
