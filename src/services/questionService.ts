@@ -1,6 +1,6 @@
 import axios from "axios"
 import {type Question } from "../types"
-const BASE_URL = 'http://localhost:5173/data.json'
+const BASE_URL = '/data.json'
 
 interface QuestionService{
     getAll: () => Promise<Question[]>
