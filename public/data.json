@@ -1,0 +1,639 @@
+[
+  {
+    "id": 1,
+    "question": "¿Cuál es la salida de este código?",
+    "code": "console.log(typeof NaN)",
+    "answers": [
+      "undefined",
+      "NaN",
+      "string",
+      "number"
+    ],
+    "correctAnswer": 3,
+    "explanation": "NaN es de tipo number en JavaScript, aunque represente 'Not a Number'."
+  },
+  {
+    "id": 2,
+    "question": "¿Cuál es el resultado de la siguiente expresión?",
+    "code": "3 + 2 + '7'",
+    "answers": [
+      "12",
+      "327",
+      "57",
+      "NaN"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Primero suma 3+2=5, luego concatena con la cadena '7', resultando '57'."
+  },
+  {
+    "id": 3,
+    "question": "¿Cuál es la salida de este código?",
+    "code": "let a = 10;\nlet b = () => {\n  console.log(this.a);\n}\nb();",
+    "answers": [
+      "undefined",
+      "null",
+      "10",
+      "ReferenceError"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Las arrow functions no tienen su propio this; usan el del contexto léxico, que no tiene 'a'."
+  },
+  {
+    "id": 4,
+    "question": "¿Cuál es el resultado de la siguiente expresión?",
+    "code": "1 + 2 + '3' + 4 + 5",
+    "answers": [
+      "'3345'",
+      "15",
+      "NaN",
+      "Error"
+    ],
+    "correctAnswer": 0,
+    "explanation": "1+2=3, luego '3' convierte el resto en concatenación: '3'+'3'= '33', +4= '334', +5= '3345'."
+  },
+  {
+    "id": 5,
+    "question": "¿Cuál es la salida de este código?",
+    "code": "for (var i = 0; i < 3; i++) {\n  setTimeout(() => console.log(i), 1);\n}",
+    "answers": [
+      "0 1 2",
+      "3 3 3",
+      "1 2 3",
+      "2 1 0"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Con var, la misma variable i se comparte en el bucle; al ejecutarse los timeouts, i=3."
+  },
+  {
+    "id": 6,
+    "question": "¿Cuál es el resultado de la siguiente expresión?",
+    "code": "2 > '3'",
+    "answers": [
+      "true",
+      "false",
+      "undefined",
+      "NaN"
+    ],
+    "correctAnswer": 1,
+    "explanation": "La cadena '3' se convierte a número 3, y 2 > 3 es false."
+  },
+  {
+    "id": 7,
+    "question": "¿Cuál es la salida de este código?",
+    "code": "const arr = [1, 2, 3, 4, 5];\nconst [x, y, ...rest] = arr;\nconsole.log(rest.length);",
+    "answers": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Se extraen x=1, y=2, y rest=[3,4,5], cuyo length es 3."
+  },
+  {
+    "id": 8,
+    "question": "¿Cuál es el resultado de la siguiente expresión?",
+    "code": "'2' + 3 * 4",
+    "answers": [
+      "212",
+      "20",
+      "26",
+      "Error"
+    ],
+    "correctAnswer": 0,
+    "explanation": "3*4=12, luego se concatena con '2' → '212'."
+  },
+  {
+    "id": 9,
+    "question": "¿Cuál es la salida de este código?",
+    "code": "const arr = [1, 2, 3];\narr[10] = 10;\nconsole.log(arr.length);",
+    "answers": [
+      "3",
+      "10",
+      "11",
+      "undefined"
+    ],
+    "correctAnswer": 2,
+    "explanation": "El índice más alto es 10, lo que hace que la longitud sea 11."
+  },
+  {
+    "id": 11,
+    "question": "¿Cuál es la salida de este código?",
+    "code": "console.log(0.1 + 0.2 === 0.3)",
+    "answers": [
+      "true",
+      "false",
+      "undefined",
+      "NaN"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Por la imprecisión de coma flotante, 0.1+0.2 = 0.30000000000000004, no exactamente 0.3."
+  },
+  {
+    "id": 12,
+    "question": "¿Cuál es el resultado de la siguiente expresión?",
+    "code": "[] + []",
+    "answers": [
+      "[]",
+      "''",
+      "undefined",
+      "NaN"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Los arrays se convierten en cadenas vacías al sumarse, resultando ''."
+  },
+  {
+    "id": 13,
+    "question": "¿Cuál es la salida de este código?",
+    "code": "const obj1 = {a: 'foo'};\nconst obj2 = {b: 'bar'};\nconst obj3 = {c: 'baz'};\nconst obj4 = Object.assign(obj1, obj2, obj3);\nconsole.log(obj4);",
+    "answers": [
+      "{a: 'foo', b: 'bar', c: 'baz'}",
+      "{b: 'bar', c: 'baz'}",
+      "{a: 'foo', b: 'bar'}",
+      "{c: 'baz'}"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Object.assign combina todas las propiedades en el primer objeto, resultando {a:'foo', b:'bar', c:'baz'}."
+  },
+  {
+    "id": 14,
+    "question": "¿Cuál es el resultado de la siguiente expresión?",
+    "code": "'foo' instanceof String",
+    "answers": [
+      "true",
+      "false",
+      "null",
+      "undefined"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Los literales string no son instancias de String (objeto), solo de tipo primitivo."
+  },
+  {
+    "id": 15,
+    "question": "¿Cuál es la salida de este código?",
+    "code": "const arr1 = [1, 2, 3];\nconst arr2 = [4, 5, 6];\nconst arr3 = [...arr1, ...arr2];\nconsole.log(arr3);",
+    "answers": [
+      "[1, 2, 3, 4, 5, 6]",
+      "[[1, 2, 3], [4, 5, 6]]",
+      "[[1, 2, 3], 4, 5, 6]",
+      "[1, 2, 3, [4, 5, 6]]"
+    ],
+    "correctAnswer": 0,
+    "explanation": "El spread operator expande ambos arreglos en uno solo: [1,2,3,4,5,6]."
+  },
+  {
+    "id": 16,
+    "question": "¿Cuál es el resultado de la siguiente expresión?",
+    "code": "parseInt('0.1')",
+    "answers": [
+      "0.1",
+      "1",
+      "0",
+      "Error"
+    ],
+    "correctAnswer": 2,
+    "explanation": "parseInt lee hasta el punto decimal, convirtiendo '0.1' en 0."
+  },
+  {
+    "id": 17,
+    "question": "¿Cuál es la salida de este código?",
+    "code": "const a = {x: 1};\nconst b = {y: 2};\nconst c = Object.assign({}, a, b);\nconsole.log(c);",
+    "answers": [
+      "{x: 1}",
+      "{y: 2}",
+      "{x: 1, y: 2}",
+      "{}"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Se copian las propiedades de a y b en un nuevo objeto: {x:1, y:2}."
+  },
+  {
+    "id": 18,
+    "question": "¿Cuál es el resultado de la siguiente expresión?",
+    "code": "'foo' + new String('bar')",
+    "answers": [
+      "'foobar'",
+      "'barfoo'",
+      "TypeError",
+      "NaN"
+    ],
+    "correctAnswer": 0,
+    "explanation": "new String('bar') se convierte implícitamente en 'bar', concatenándose con 'foo'."
+  },
+  {
+    "id": 19,
+    "question": "¿Cuál es la salida de este código?",
+    "code": "const obj = {a: 1};\nfunction foo(o) {\n o = {b: 2};\n}\nfoo(obj);\nconsole.log(obj);",
+    "answers": [
+      "{a: 1}",
+      "{b: 2}",
+      "{}",
+      "undefined"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Reasignar el parámetro no afecta al objeto original, que sigue siendo {a:1}."
+  },
+  {
+    "id": 20,
+    "question": "¿Cuál es el resultado de la siguiente expresión?",
+    "code": "typeof null",
+    "answers": [
+      "'object'",
+      "'null'",
+      "'undefined'",
+      "TypeError"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Por un bug histórico en JavaScript, typeof null devuelve 'object'."
+  },
+  {
+    "id": 21,
+    "question": "¿Cuál es la salida de este código?",
+    "code": "const arr1 = [1, 2, 3];\nconst arr2 = [4, 5, 6];\narr1.push(...arr2);\nconsole.log(arr1);",
+    "answers": [
+      "[1, 2, 3, 4, 5, 6]",
+      "[[1, 2, 3], [4, 5, 6]]",
+      "[[1, 2, 3], 4, 5, 6]",
+      "[1, 2, 3, [4, 5, 6]]"
+    ],
+    "correctAnswer": 0,
+    "explanation": "push con spread agrega cada elemento de arr2 dentro de arr1, quedando [1,2,3,4,5,6]."
+  },
+  {
+    "id": 22,
+    "question": "¿Cuál es el resultado de la siguiente expresión?",
+    "code": "'foo' > 'bar'",
+    "answers": [
+      "true",
+      "false",
+      "undefined",
+      "NaN"
+    ],
+    "correctAnswer": 0,
+    "explanation": "La comparación se hace lexicográficamente; 'f' viene después de 'b', por eso es true."
+  },
+  {
+    "id": 23,
+    "question": "¿Cuál es la salida de este código?",
+    "code": "const obj = {a: 1};\nfunction foo(o) {\n o.a = 2;\n}\nfoo(obj);\nconsole.log(obj);",
+    "answers": [
+      "{a: 1}",
+      "{a: 2}",
+      "{}",
+      "undefined"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Se modifica la propiedad del objeto referenciado, por eso cambia a {a:2}."
+  },
+  {
+    "id": 24,
+    "question": "¿Cuál es el resultado de la siguiente expresión?",
+    "code": "2 + true",
+    "answers": [
+      "3",
+      "2",
+      "true",
+      "Error"
+    ],
+    "correctAnswer": 0,
+    "explanation": "true se convierte a 1 en contexto numérico, por lo que 2+1=3."
+  },
+  {
+    "id": 25,
+    "question": "¿Cuál es la salida de este código?",
+    "code": "const arr1 = [1, 2, 3];\nconst arr2 = [4, 5, 6];\nconst arr3 = [7, 8, 9];\nconst arr4 = [].concat(arr1, arr2, arr3);\nconsole.log(arr4);",
+    "answers": [
+      "[1, 2, 3, 4, 5, 6, 7, 8, 9]",
+      "[[1, 2, 3], [4, 5, 6], [7, 8, 9]]",
+      "[[1, 2, 3], 4, 5, 6, [7, 8, 9]]",
+      "[1, 2, 3, [4, 5, 6], 7, 8, 9]"
+    ],
+    "correctAnswer": 0,
+    "explanation": "concat une los arrays en un nuevo array plano, resultando [1,2,3,4,5,6,7,8,9]."
+  },
+  {
+    "id": 26,
+    "question": "¿Cuál es el resultado de la siguiente expresión?",
+    "code": "'1' - - '1'",
+    "answers": [
+      "0",
+      "2",
+      "'11'",
+      "NaN"
+    ],
+    "correctAnswer": 1,
+    "explanation": "El operador - convierte strings a números: '1'- -'1' equivale a 1 - -1 = 2."
+  },
+  {
+    "id": 27,
+    "question": "¿Cuál es la salida de este código?",
+    "code": "console.log(typeof [][Symbol.iterator]);",
+    "answers": [
+      "undefined",
+      "'array'",
+      "'object'",
+      "'function'"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Los arrays tienen un iterador por defecto, que es una función."
+  },
+  {
+    "id": 28,
+    "question": "¿Cuál es el resultado de la siguiente expresión?",
+    "code": "[1, 2, 3].map(num => num * 2);",
+    "answers": [
+      "[2, 4, 6]",
+      "[1, 2, 3, 1, 2, 3]",
+      "[2, 2, 2]",
+      "[1, 4, 9]"
+    ],
+    "correctAnswer": 0,
+    "explanation": "map aplica la función a cada elemento, duplicando cada número: [2,4,6]."
+  },
+  {
+    "id": 29,
+    "question": "¿Cuál es la salida de este código?",
+    "code": "let a = 10;\nlet b = () => {\n console.log(this.a);\n}\nlet c = {a: 5, b: b};\nc.b();",
+    "answers": [
+      "undefined",
+      "null",
+      "10",
+      "5"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Las arrow functions no tienen this propio, heredan el de su contexto, que no tiene 'a'."
+  },
+  {
+    "id": 30,
+    "question": "¿Cuál es el resultado de la siguiente expresión?",
+    "code": "true + false",
+    "answers": [
+      "1",
+      "0",
+      "'truefalse'",
+      "Error"
+    ],
+    "correctAnswer": 0,
+    "explanation": "true es 1 y false es 0 en contexto numérico, entonces 1+0=1."
+  },
+  {
+    "id": 31,
+    "question": "¿Cuál es la salida de este código?",
+    "code": "const arr = [1, 2, 3, 4, 5];\nconst sum = arr.reduce((total, num) => total + num);\nconsole.log(sum);",
+    "answers": [
+      "15",
+      "10",
+      "5",
+      "Error"
+    ],
+    "correctAnswer": 0,
+    "explanation": "reduce suma todos los elementos: 1+2+3+4+5 = 15."
+  },
+  {
+    "id": 32,
+    "question": "¿Cuál es el resultado de la siguiente expresión?",
+    "code": "'foo' == new String('foo')",
+    "answers": [
+      "true",
+      "false",
+      "null",
+      "undefined"
+    ],
+    "correctAnswer": 0,
+    "explanation": "La comparación == convierte el objeto String a primitivo, resultando 'foo'=='foo'."
+  },
+  {
+    "id": 33,
+    "question": "¿Cuál es la salida de este código?",
+    "code": "const arr = [1, 2, 3, 4, 5];\nconst filteredArr = arr.filter(num => num % 2 === 0);\nconsole.log(filteredArr);",
+    "answers": [
+      "[2, 4]",
+      "[1, 3, 5]",
+      "[1, 2, 3, 4, 5]",
+      "[]"
+    ],
+    "correctAnswer": 0,
+    "explanation": "filter devuelve solo los elementos pares: [2,4]."
+  },
+  {
+    "id": 34,
+    "question": "¿Cuál es el resultado de la siguiente expresión?",
+    "code": "new String('foo') === 'foo'",
+    "answers": [
+      "true",
+      "false",
+      "null",
+      "undefined"
+    ],
+    "correctAnswer": 1,
+    "explanation": "=== compara sin conversión; un objeto String no es igual a un string primitivo."
+  },
+  {
+    "id": 35,
+    "question": "¿Cuál es la salida de este código?",
+    "code": "const obj1 = {a: 'foo'};\nconst obj2 = {b: 'bar'};\nconst obj3 = {...obj1, ...obj2};\nconsole.log(obj3);",
+    "answers": [
+      "{a: 'foo', b: 'bar'}",
+      "{b: 'bar'}",
+      "{a: 'foo'}",
+      "SyntaxError"
+    ],
+    "correctAnswer": 0,
+    "explanation": "El spread operator copia propiedades en un nuevo objeto: {a:'foo', b:'bar'}."
+  },
+  {
+    "id": 36,
+    "question": "¿Cuál es el resultado de la siguiente expresión?",
+    "code": "[] == ![]",
+    "answers": [
+      "true",
+      "false",
+      "null",
+      "undefined"
+    ],
+    "correctAnswer": 0,
+    "explanation": "[] es truthy, ![] es false; [] == false convierte [] a '', luego a 0, y false a 0 → true."
+  },
+  {
+    "id": 37,
+    "question": "¿Cuál es la salida de este código?",
+    "code": "const arr = [1, 2, 3];\nconst [x, y, z] = arr;\nconsole.log(z);",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "undefined"
+    ],
+    "correctAnswer": 2,
+    "explanation": "La desestructuración asigna x=1, y=2, z=3, por lo que imprime 3."
+  },
+  {
+    "id": 38,
+    "question": "¿Cuál es el resultado de la siguiente expresión?",
+    "code": "'2' > 1",
+    "answers": [
+      "true",
+      "false",
+      "undefined",
+      "NaN"
+    ],
+    "correctAnswer": 0,
+    "explanation": "La cadena '2' se convierte a número 2, y 2 > 1 es true."
+  },
+  {
+    "id": 39,
+    "question": "¿Cuál es la salida de este código?",
+    "code": "const arr1 = [1, 2, 3];\nconst arr2 = arr1.map(num => num * 2);\nconsole.log(arr2);",
+    "answers": [
+      "[1, 2, 3]",
+      "[2, 4, 6]",
+      "[2, 2, 2]",
+      "[1, 4, 9]"
+    ],
+    "correctAnswer": 1,
+    "explanation": "map multiplica cada número por 2: [2,4,6]."
+  },
+  {
+    "id": 40,
+    "question": "¿Cuál es el resultado de la siguiente expresión?",
+    "code": "undefined == null",
+    "answers": [
+      "true",
+      "false",
+      "null",
+      "undefined"
+    ],
+    "correctAnswer": 0,
+    "explanation": "== considera undefined y null como iguales entre sí."
+  },
+  {
+    "id": 41,
+    "question": "¿Cuál es la salida de este código?",
+    "code": "const arr = [1, 2, 3];\nconst [x, ...rest] = arr;\nconsole.log(rest);",
+    "answers": [
+      "[1]",
+      "[2, 3]",
+      "[3]",
+      "[]"
+    ],
+    "correctAnswer": 1,
+    "explanation": "La desestructuración toma x=1 y el resto [2,3]."
+  },
+  {
+    "id": 42,
+    "question": "¿Cuál es el resultado de la siguiente expresión?",
+    "code": "'foo' + 'bar' + 2",
+    "answers": [
+      "'foobar2'",
+      "'foo2bar'",
+      "'2foobar'",
+      "Error"
+    ],
+    "correctAnswer": 0,
+    "explanation": "La concatenación de strings ocurre primero: 'foo'+'bar'='foobar', luego +'2' da 'foobar2'."
+  },
+  {
+    "id": 43,
+    "question": "¿Cuál es la salida de este código?",
+    "code": "const arr = [1, 2, 3];\nconst sum = arr.reduce((total, num) => total + num, 0);\nconsole.log(sum);",
+    "answers": [
+      "6",
+      "5",
+      "3",
+      "0"
+    ],
+    "correctAnswer": 0,
+    "explanation": "reduce con acumulador inicial 0 suma todos los elementos: 6."
+  },
+  {
+    "id": 44,
+    "question": "¿Cuál es el resultado de la siguiente expresión?",
+    "code": "2 * '3'",
+    "answers": [
+      "6",
+      "5",
+      "'6'",
+      "Error"
+    ],
+    "correctAnswer": 0,
+    "explanation": "El operador * convierte '3' a número, resultando 2*3=6."
+  },
+  {
+    "id": 45,
+    "question": "¿Cuál es la salida de este código?",
+    "code": "const obj = {a: 'foo', b: 'bar'};\nfor (let key in obj) {\n console.log(key);\n}",
+    "answers": [
+      "'foo', 'bar'",
+      "{'a', 'b'}",
+      "SyntaxError",
+      "undefined"
+    ],
+    "correctAnswer": 1,
+    "explanation": "for...in recorre las claves, no los valores, por lo que imprime 'a' y 'b'."
+  },
+  {
+    "id": 46,
+    "question": "¿Cuál es el resultado de la siguiente expresión?",
+    "code": "'2' + true",
+    "answers": [
+      "'2true'",
+      "'3'",
+      "3",
+      "Error"
+    ],
+    "correctAnswer": 0,
+    "explanation": "El + con string convierte true a 'true', resultando '2true'."
+  },
+  {
+    "id": 47,
+    "question": "¿Cuál es la salida de este código?",
+    "code": "const arr1 = [1, 2, 3];\nconst arr2 = [4, 5, 6];\nconst arr3 = [...arr1, ...arr2];\nconsole.log(arr3);",
+    "answers": [
+      "[1, 2, 3, 4, 5, 6]",
+      "[[1, 2, 3], [4, 5, 6]]",
+      "[[1, 2, 3], 4, 5, 6]",
+      "[1, 2, 3, [4, 5, 6]]"
+    ],
+    "correctAnswer": 0,
+    "explanation": "El spread operator expande ambos arreglos en uno solo: [1,2,3,4,5,6]."
+  },
+  {
+    "id": 48,
+    "question": "¿Cuál es el resultado de la siguiente expresión?",
+    "code": "'foo' > 1",
+    "answers": [
+      "true",
+      "false",
+      "undefined",
+      "NaN"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Al convertir 'foo' a número se obtiene NaN, y cualquier comparación con NaN es false."
+  },
+  {
+    "id": 49,
+    "question": "¿Cuál es la salida de este código?",
+    "code": "const arr = [1, 2, 3];\nconst [x, y] = arr;\nconsole.log(y);",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "undefined"
+    ],
+    "correctAnswer": 1,
+    "explanation": "La desestructuración asigna x=1, y=2, por lo que imprime 2."
+  },
+  {
+    "id": 50,
+    "question": "¿Cuál es el resultado de la siguiente expresión:",
+    "code": "[1, 2, 3].filter(num => num > 1);",
+    "answers": [
+      "[1, 2, 3]",
+      "[2, 3]",
+      "[1]",
+      "[3]"
+    ],
+    "correctAnswer": 1,
+    "explanation": "filter mantiene solo los elementos mayores que 1: [2,3]."
+  }
+]
