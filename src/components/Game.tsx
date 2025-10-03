@@ -86,7 +86,10 @@ export const Game = () => {
 
 
             <Typography variant="body2" color="gray" textAlign="center" sx={{ marginBottom: 3 }}>
-                Desarrollado con Typescript y Zustand por <a href="https://github.com/01-Menjivar">Oscar Menjivar</a>
+                Desarrollado con Typescript y Zustand por <a 
+                href="https://github.com/01-Menjivar"
+                target="_blank"
+                >Oscar Menjivar</a>
             </Typography>
         </>
     )
